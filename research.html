@@ -5,9 +5,9 @@
   <link rel="stylesheet" href="owl-carousel/owl.theme.css">
   <link rel="stylesheet" href="owl-carousel/owl.demo.css">
   <link rel="stylesheet" href="assets/css/demo.css">
-  
   <link href="assets/css/istarBootstrapTheme.css" rel="stylesheet">
   <link href="assets/css/custom.css" rel="stylesheet">
+  <link id="font-awesome-css" href="assets/css/font-awesome.min.css" type="text/css" media="screen">
   <script type="text/javascript" src="assets/js/jquery-1.9.1.min.js"></script>
   <script type="text/javascript" src="owl-carousel/owl.carousel.min.js"></script>
 </head>
@@ -19,6 +19,13 @@
 </style>
 
 <body>
+
+  <div class="scroll-top-wrapper ">
+    <span class="scroll-top-inner">
+      <!--<i class="fa fa-2x fa-arrow-circle-up"></i>-->
+      <img src="assets/istar/buttons/totop.png">
+    </span>
+  </div>
 
   <div id="navigation" class="navbar navbar-fixed-top">
     <div class="navbar-inner">
@@ -41,6 +48,10 @@
       </div>
     </div>
   </div>
+  <!-- Banner 
+  <div class="container" align="middle" style="background-color: #04A; margin-top: 46px">
+    <a href="http://istar.jhu.edu"><img src="assets/istar/banner.png" id="banner"></a>
+  </div>-->
 
   <div id="title" class="istar-title">
     <div class="container">
@@ -249,11 +260,33 @@
 <script>
   $(document).ready(function() {
     $("#owl-demo").owlCarousel({
-      navigation : true,
-      autoPlay: 5000,
+      navigation : false,
       slideSpeed : 300,
       paginationSpeed : 400,
       singleItem : true
     });
   });
+  $("a[href^=#]").click(function(e) {
+    e.preventDefault();
+    var dest = $(this).attr('href');
+    console.log(dest);
+    $('html,body').animate({ scrollTop: $(dest).offset().top }, 'fast');
+  });
+  $(function(){   
+    $(document).on( 'scroll', function(){
+      if ($(window).scrollTop() > 100) {
+        $('.scroll-top-wrapper').addClass('show');
+      } else {
+        $('.scroll-top-wrapper').removeClass('show');
+      }
+    });
+    $('.scroll-top-wrapper').on('click', scrollToTop);
+  });
+  function scrollToTop() {
+    verticalOffset = typeof(verticalOffset) != 'undefined' ? verticalOffset : 0;
+    element = $('body');
+    offset = element.offset();
+    offsetTop = offset.top;
+    $('html, body').animate({scrollTop: offsetTop}, 100, 'linear');
+  }
 </script>

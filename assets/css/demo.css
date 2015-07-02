@@ -1,6 +1,6 @@
   .istar-title {
     color: #5599DD;
-    margin-bottom: -10px;
+    margin-bottom: 0px;
   }
   .istar-label {
     padding-top: 50px;
@@ -29,17 +29,52 @@
   .istar-link:visited {
     color: #E0E0E0;
   }
+  #banner {
+    width: 100%;
+  }
   #navigation {
-    background-color: #FFF;
-    border-color: #E0E0E0;
-    border-top-style: hidden;
-    border-left-style: hidden;
-    border-right-style: hidden;
-    border-bottom-style: solid;
+    background-color: #028;
+    border-color: #CCC;
     border-width: thin;
     display: inline-block;
   }
   #logos {
     background-color: #0044AA;
     color: #A0A0A0;
+  }
+  .scroll-top-wrapper {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    text-align: center;
+    z-index: 99999999;
+      background-color: #777777;
+    color: #eeeeee;
+    width: 64px;
+    height: 64px;
+    line-height: 48px;
+    right: 30px;
+    top: 60px;
+    padding-top: 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+  .scroll-top-wrapper:hover {
+    background-color: #888888;
+  }
+  .scroll-top-wrapper.show {
+      visibility:visible;
+      cursor:pointer;
+    opacity: 1.0;
+  }
+  .scroll-top-wrapper i.fa {
+    line-height: inherit;
   }

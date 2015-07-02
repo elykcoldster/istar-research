@@ -3796,7 +3796,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a {
   float: none;
   padding: 9px 15px 9px;
-  color: #888;
+  color: #EEE;
   text-decoration: none;
 }
 .navbar .nav .dropdown-toggle .caret {
@@ -3805,7 +3805,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
   background-color: transparent;
-  color: #47c;
+  color: #8BF;
   text-decoration: none;
 }
 .navbar .nav > .active > a,
